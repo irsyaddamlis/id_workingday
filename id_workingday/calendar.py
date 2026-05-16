@@ -40,7 +40,7 @@ def working_date(
 
     # base holidays (official) from "holidays" lib
     holiday = pd.DataFrame(
-        sorted(holidays.country_holidays("ID", years=pd.date_range(start=start, end=end, freq="YE").year).items()),
+        sorted(holidays.country_holidays("ID", years=pd.date_range(start=start, end=end).year).items()),
         columns=["date", "name"],
     )
 
